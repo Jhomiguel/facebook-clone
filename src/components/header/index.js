@@ -24,10 +24,10 @@ function Header() {
       </div>
       <div className="header__input">
         <SearchIcon />
-        <input type="text" />
+        <input placeholder="Search" type="text" />
       </div>
       <div className="header__middle">
-        <div className="header__option">
+        <div className="header__option header__option--active">
           <HomeIcon fontsize="large" />
         </div>
         <div className="header__option">
