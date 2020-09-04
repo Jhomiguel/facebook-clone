@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
+import Header from "./components/header";
 
 function App() {
   return (
     <div>
-      <h1>klk</h1>
+      <Header />
     </div>
   );
 }
