@@ -12,8 +12,10 @@ import AddIcon from "@material-ui/icons/Add";
 import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { useStateValue } from "../../context/StateContext";
 
 function Header() {
+  const [{ user }] = useStateValue();
   return (
     <div className="header">
       <div className="header__left">
@@ -28,25 +30,25 @@ function Header() {
       </div>
       <div className="header__middle">
         <div className="header__option header__option--active">
-          <HomeIcon fontsize="large" />
+          <HomeIcon fontSize="large" />
         </div>
         <div className="header__option">
-          <FlagIcon fontsize="large" />
+          <FlagIcon fontSize="large" />
         </div>
         <div className="header__option">
-          <SubscriptionsOutlinedIcon fontsize="large" />
+          <SubscriptionsOutlinedIcon fontSize="large" />
         </div>
         <div className="header__option">
-          <StorefrontOutlinedIcon fontsize="large" />
+          <StorefrontOutlinedIcon fontSize="large" />
         </div>
         <div className="header__option">
-          <SupervisedUserCircleIcon fontsize="large" />
+          <SupervisedUserCircleIcon fontSize="large" />
         </div>
       </div>
       <div className="header__right">
         <div className="header__info">
-          <Avatar />
-          <h4>Jhomiguel</h4>
+          <Avatar src={user.photoURL} />
+          <h4>{user.displayName}</h4>
         </div>
         <IconButton>
           <AddIcon />
